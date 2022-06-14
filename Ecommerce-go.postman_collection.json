@@ -1,0 +1,816 @@
+{
+	"info": {
+		"_postman_id": "feebf28c-ff7d-4525-8e39-8ffef9f11722",
+		"name": "Ecommerce-go",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"first_name\": \"Prayugo\",\n  \"last_name\": \"Dwi\",\n  \"email\": \"Prayugo@gmail.com\",\n  \"password\": \"Prayugo\",\n  \"phone\": \"+628975666\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/users/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"signup"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"first_name\": \"Prayugo\",\n  \"last_name\": \"Dwi\",\n  \"email\": \"Prayugo@gmail.com\",\n  \"password\": \"Prayugo\",\n  \"phone\": \"+628975666\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/users/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"signup"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"message\": \"User created successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"Prayugo@gmail.com\",\n  \"password\": \"Prayugo\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"Prayugo@gmail.com\",\n  \"password\": \"Prayugo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"_id\": \"62a87ba661072a6a4da21a18\",\n    \"first_name\": \"Prayugo\",\n    \"last_name\": \"Dwi\",\n    \"email\": \"Prayugo@gmail.com\",\n    \"password\": \"$2a$14$cxya1n6mQQWw25H0eiSg/OmfTZlgXKfAC99btc3tQdCeLiy3gvtOW\",\n    \"phone\": \"+628975666\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6IlByYXl1Z29AZ21haWwuY29tIiwiRmlyc3RfTmFtZSI6IlByYXl1Z28iLCJMYXN0X05hbWUiOiJEd2kiLCJVaWQiOiI2MmE4N2JhNjYxMDcyYTZhNGRhMjFhMTgiLCJleHAiOjE2NTUyOTUyNzB9.UKL28oCUSpt8XiuQ4Nb4Uc2EVw4vFnGF9UyOWgYYEKg\",\n    \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6IiIsIkZpcnN0X05hbWUiOiIiLCJMYXN0X05hbWUiOiIiLCJVaWQiOiIiLCJleHAiOjE2NTU4MTM2NzB9.ZtSAbhdQ4Wq5yuBV6KAgMl3tppDIFGSCylX6w2RjZuM\",\n    \"created_at\": \"2022-06-14T12:14:30Z\",\n    \"updated_at\": \"2022-06-14T12:14:30Z\",\n    \"user_id\": \"62a87ba661072a6a4da21a18\",\n    \"userCart\": [],\n    \"address\": [],\n    \"orders\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "AddProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"product_name\": \"Alienware x10\",\n  \"price\": 2500,\n  \"rating\": 10,\n  \"image\": \"alienware.jpg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/admin/addproduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"admin",
+						"addproduct"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"product_name\": \"Alienware x10\",\n  \"price\": 2500,\n  \"rating\": 10,\n  \"image\": \"alienware.jpg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/admin/addproduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"admin",
+								"addproduct"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"message\": \"Product Created Successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "List Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/users/productview",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"productview"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/users/productview",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"productview"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "[\n    {\n        \"Product_ID\": \"62a5ed7993a654bea943922c\",\n        \"product_name\": \"Alienware x15\",\n        \"price\": 2500,\n        \"rating\": 10,\n        \"image\": \"alienware.jpg\"\n    },\n    {\n        \"Product_ID\": \"62a87d39478ebb805da73491\",\n        \"product_name\": \"Alienware x10\",\n        \"price\": 2500,\n        \"rating\": 10,\n        \"image\": \"alienware.jpg\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "search Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/users/search?name=Alienware",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Alienware"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/users/search?name=Alienware",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"search"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Alienware"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "[\n    {\n        \"Product_ID\": \"62a5ed7993a654bea943922c\",\n        \"product_name\": \"Alienware x15\",\n        \"price\": 2500,\n        \"rating\": 10,\n        \"image\": \"alienware.jpg\"\n    },\n    {\n        \"Product_ID\": \"62a87d39478ebb805da73491\",\n        \"product_name\": \"Alienware x10\",\n        \"price\": 2500,\n        \"rating\": 10,\n        \"image\": \"alienware.jpg\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Add Product To Cart",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6IiIsIkZpcnN0X05hbWUiOiIiLCJMYXN0X05hbWUiOiIiLCJVaWQiOiIiLCJleHAiOjE2NTU4MTM2NzB9.ZtSAbhdQ4Wq5yuBV6KAgMl3tppDIFGSCylX6w2RjZuM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/addtocart?id=62a5ed7993a654bea943922c&userID=62a87ba661072a6a4da21a18",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"addtocart"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "62a5ed7993a654bea943922c"
+						},
+						{
+							"key": "userID",
+							"value": "62a87ba661072a6a4da21a18"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6IiIsIkZpcnN0X05hbWUiOiIiLCJMYXN0X05hbWUiOiIiLCJVaWQiOiIiLCJleHAiOjE2NTU4MTM2NzB9.ZtSAbhdQ4Wq5yuBV6KAgMl3tppDIFGSCylX6w2RjZuM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/addtocart?id=62a5ed7993a654bea943922c&userID=62a87ba661072a6a4da21a18",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"addtocart"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "62a5ed7993a654bea943922c"
+								},
+								{
+									"key": "userID",
+									"value": "62a87ba661072a6a4da21a18"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"message\": \"Successfully added to cart\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Remove Item From Cart",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6IiIsIkZpcnN0X05hbWUiOiIiLCJMYXN0X05hbWUiOiIiLCJVaWQiOiIiLCJleHAiOjE2NTU4MTM2NzB9.ZtSAbhdQ4Wq5yuBV6KAgMl3tppDIFGSCylX6w2RjZuM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/removeitem?id=62a5ed7993a654bea943922c&userID=62a87ba661072a6a4da21a18",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"removeitem"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "62a5ed7993a654bea943922c"
+						},
+						{
+							"key": "userID",
+							"value": "62a87ba661072a6a4da21a18"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6IiIsIkZpcnN0X05hbWUiOiIiLCJMYXN0X05hbWUiOiIiLCJVaWQiOiIiLCJleHAiOjE2NTU4MTM2NzB9.ZtSAbhdQ4Wq5yuBV6KAgMl3tppDIFGSCylX6w2RjZuM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/removeitem?id=62a5ed7993a654bea943922c&userID=62a87ba661072a6a4da21a18",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"removeitem"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "62a5ed7993a654bea943922c"
+								},
+								{
+									"key": "userID",
+									"value": "62a87ba661072a6a4da21a18"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"message\": \"Successfully removed from cart\"\n}"
+				}
+			]
+		},
+		{
+			"name": "List Product Cart",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFraGlsc0BnbWFpbC5jb20iLCJGaXJzdF9OYW1lIjoiQWtoaWxzIiwiTGFzdF9OYW1lIjoiU2hhcm1hYSIsIlVpZCI6IjYyYTVlYmU3MDY5ZjMxNzE5OGM2MTZhMiIsImV4cCI6MTY1NTEyNzM5OX0._hSLOxMbK5nIktdeuYGqQdjHH1IGTno7wwfUm4l8xzQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/listcart?id=62a5ebe7069f317198c616a2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"listcart"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "62a5ebe7069f317198c616a2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add address",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6IiIsIkZpcnN0X05hbWUiOiIiLCJMYXN0X05hbWUiOiIiLCJVaWQiOiIiLCJleHAiOjE2NTU4MTM2NzB9.ZtSAbhdQ4Wq5yuBV6KAgMl3tppDIFGSCylX6w2RjZuM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"house_name\": \"Rumah Bahagia\",\n  \"street\": \"Jalan Tirto Sari\",\n  \"city_name\": \"Purwokerto\",\n  \"pin_code\": \"20112\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/addaddress?id=62a86f0361072a6a4da21a17",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"addaddress"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "62a86f0361072a6a4da21a17"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6IiIsIkZpcnN0X05hbWUiOiIiLCJMYXN0X05hbWUiOiIiLCJVaWQiOiIiLCJleHAiOjE2NTU4MTM2NzB9.ZtSAbhdQ4Wq5yuBV6KAgMl3tppDIFGSCylX6w2RjZuM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"house_name\": \"Rumah Bahagia\",\n  \"street\": \"Jalan Tirto Sari\",\n  \"city_name\": \"Purwokerto\",\n  \"pin_code\": \"20112\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/addadress?id=62a87ba661072a6a4da21a18",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"addadress"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "62a87ba661072a6a4da21a18"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"message\": \"Address Added\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Edit Home Address",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6IiIsIkZpcnN0X05hbWUiOiIiLCJMYXN0X05hbWUiOiIiLCJVaWQiOiIiLCJleHAiOjE2NTU4MTM2NzB9.ZtSAbhdQ4Wq5yuBV6KAgMl3tppDIFGSCylX6w2RjZuM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"house_name\": \"Rumah Bahagia\",\n  \"street\": \"Jalan Tirto Sari\",\n  \"city_name\": \"Purwokerto\",\n  \"pin_code\": \"20112\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/edithomeaddress?id=62a5ebe7069f317198c616a2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"edithomeaddress"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "62a5ebe7069f317198c616a2"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6IiIsIkZpcnN0X05hbWUiOiIiLCJMYXN0X05hbWUiOiIiLCJVaWQiOiIiLCJleHAiOjE2NTU4MTM2NzB9.ZtSAbhdQ4Wq5yuBV6KAgMl3tppDIFGSCylX6w2RjZuM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"house_name\": \"Rumah Bahagia\",\n  \"street\": \"Jalan Tirto Sari\",\n  \"city_name\": \"Purwokerto\",\n  \"pin_code\": \"20112\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/edithomeaddress?id=62a5ebe7069f317198c616a2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"edithomeaddress"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "62a5ebe7069f317198c616a2"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"message\": \"Address Updated\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Home Address",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6IiIsIkZpcnN0X05hbWUiOiIiLCJMYXN0X05hbWUiOiIiLCJVaWQiOiIiLCJleHAiOjE2NTU4MTM2NzB9.ZtSAbhdQ4Wq5yuBV6KAgMl3tppDIFGSCylX6w2RjZuM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/deleteaddresses?id=62a86f0361072a6a4da21a17",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"deleteaddresses"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "62a86f0361072a6a4da21a17"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6IiIsIkZpcnN0X05hbWUiOiIiLCJMYXN0X05hbWUiOiIiLCJVaWQiOiIiLCJleHAiOjE2NTU4MTM2NzB9.ZtSAbhdQ4Wq5yuBV6KAgMl3tppDIFGSCylX6w2RjZuM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"house_name\": \"Rumah Bahagia\",\n  \"street_name\": \"Jalan Tirto Sari\",\n  \"city_name\": \"Purwokerto\",\n  \"pin_code\": \"20112\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/edithomeaddress?id=62a5ebe7069f317198c616a2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"edithomeaddress"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "62a5ebe7069f317198c616a2"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"message\": \"Successfully Deleted the Address\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Checkout",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6IiIsIkZpcnN0X05hbWUiOiIiLCJMYXN0X05hbWUiOiIiLCJVaWQiOiIiLCJleHAiOjE2NTU4MTM2NzB9.ZtSAbhdQ4Wq5yuBV6KAgMl3tppDIFGSCylX6w2RjZuM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/cartcheckout?id=62a86f0361072a6a4da21a17",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"cartcheckout"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "62a86f0361072a6a4da21a17"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6IiIsIkZpcnN0X05hbWUiOiIiLCJMYXN0X05hbWUiOiIiLCJVaWQiOiIiLCJleHAiOjE2NTU4MTM2NzB9.ZtSAbhdQ4Wq5yuBV6KAgMl3tppDIFGSCylX6w2RjZuM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"house_name\": \"Rumah Bahagia\",\n  \"street_name\": \"Jalan Tirto Sari\",\n  \"city_name\": \"Purwokerto\",\n  \"pin_code\": \"20112\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/edithomeaddress?id=62a5ebe7069f317198c616a2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"edithomeaddress"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "62a5ebe7069f317198c616a2"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"message\": \"Successfully Checkout from cart\"\n}"
+				}
+			]
+		}
+	]
+}
