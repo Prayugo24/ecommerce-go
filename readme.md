@@ -81,7 +81,7 @@ Request :
 
 Request :
 - Method : GET
-- Endpoint : `/users/search`
+- Endpoint : `/users`
 - Body :
     QueryParam
         - name={keyword}
