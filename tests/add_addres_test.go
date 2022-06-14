@@ -3,7 +3,6 @@ package tests
 import (
 	"testing"
 	"net/http"
-	"log"
 	"io/ioutil"
 	"strings"
 )
@@ -20,18 +19,18 @@ func TestAddAddress(t *testing.T) {
 	Client := &http.Client{}
 	req, err := http.NewRequest("POST", queryUrl, strings.NewReader(rawDataJson))
 	if err != nil {
-		log.Panic(err)
+		t.Error(err)
 	}
 	req.Header.Set("Content-Type", "application/json")
 	req.Header.Set("token", TokenLogin)
 	resp, err := Client.Do(req)
 	if err != nil {
-		log.Panic(err)
+		t.Error(err)
 	}
 	defer resp.Body.Close()
 	Body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
-		log.Panic(err)
+		t.Error(err)
 	}
 	t.Log(string(Body))
 
