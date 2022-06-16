@@ -179,8 +179,8 @@ Request :
 ## Checkout http://localhost:8000/cartcheckout?id={id_user}
 
 Request :
-- Method : DELETE
-- Endpoint : `/deleteaddresses`
+- Method : GET
+- Endpoint : `/cartcheckout`
 - Header:
     token: {token_user}
 - Body :
